@@ -327,6 +327,17 @@ section {
   color: white;
 }
 
+.all-projects-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.all-projects-btn .btn-project {
+  margin-top: 0;
+  padding: 0.75rem 1.75rem;
+}
+
 .details-container {
   padding: 1.5rem;
   flex: 1;
