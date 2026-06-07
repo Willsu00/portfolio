@@ -194,6 +194,15 @@ section {
   letter-spacing: -3px;
 }
 
+.about-me-text {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.about-me-text p {
+  line-height: 1.6;
+}
+
 .tool-icons {
   display: flex;
   flex-wrap: wrap;
