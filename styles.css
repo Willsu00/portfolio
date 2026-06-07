@@ -266,8 +266,65 @@ section {
 /* PROJECTS SECTION */
 
 #projects {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  height: auto;
+  padding-bottom: 5vh;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.project-card {
+  background: rgb(245, 245, 245);
+  border: rgb(163, 163, 163) 0.1rem solid;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+}
+
+.project-card-title {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-top: 0.75rem;
+  color: black;
+}
+
+.btn-project {
+  margin-top: 0.75rem;
+  background: white;
+  border: rgb(53, 53, 53) 0.15rem solid;
+  color: black;
+  padding: 0.6rem 1.25rem;
+  width: auto;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-project:hover {
+  background: royalblue;
+  border: rgb(40, 88, 230) 0.15rem solid;
+  color: white;
 }
 
 .details-container {
@@ -280,20 +337,46 @@ section {
   text-align: center;
 }
 
-/* CONTACT SECTION */
+/* ABOUT ME & CONTACT SECTIONS */
 
+#about-me,
 #contact {
   background: rgb(53, 53, 53);
-  margin-bottom: 5vh;
-  margin-left: 13%;
-  margin-right: 13%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
   border-radius: 50px;
   height: auto;
   padding: 2.5rem 2rem;
 }
 
+#about-me {
+  margin-bottom: 5vh;
+}
+
+#contact {
+  margin-bottom: 5vh;
+}
+
+#about-me .title,
 #contact .title {
   color: white;
+}
+
+#about-me .title {
+  margin: 0;
+}
+
+#about-me .about-me-text {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  padding-bottom: 3.5rem;
+  margin-inline: auto;
+  max-width: 75%;
+  color: white;
+  font-size: clamp(0.8125rem, 0.75rem + 0.35vw, 1rem);
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  text-align: left;
 }
 
 #contact p {
@@ -390,6 +473,15 @@ section {
   .description {
     font-size: 1.5rem;
   }
+
+  .project-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #about-me .about-me-text {
+    max-width: 85%;
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -408,5 +500,15 @@ section {
 
   #side-navbar .nav-links a {
     font-size: 1rem;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #about-me .about-me-text {
+    max-width: 100%;
+    letter-spacing: 0.5px;
+    line-height: 1.55;
   }
 }
