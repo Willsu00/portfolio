@@ -12,6 +12,16 @@
     />
   </head>
   <body>
+    <!-- Desktop Nav -->
+    <!-- <nav id="navbar">
+      <div class="nav-logo">WBS</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav> -->
 
     <nav id="side-navbar">
       <div>
@@ -104,73 +114,6 @@
     <section id="contact">
       <div class="section-text">
         <h1 class="title">Contact</h1>
-        <p class="location">📍 Auckland, New Zealand</p>
-        <div class="contact-icons">
-          <button
-            class="contact-icon-btn"
-            type="button"
-            onclick="copyEmail()"
-            aria-label="Copy email address"
-            title="Copy email address"
-          >
-            <img src="./assets/email.png" alt="Email" class="contact-icon" />
-          </button>
-          <a
-            href="https://www.linkedin.com/in/william-bank-sukjaem-84aa35248/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
-            title="LinkedIn"
-          >
-            <img src="./assets/linkedin.png" alt="LinkedIn" class="contact-icon" />
-          </a>
-        </div>
-      </div>
     </section>
-
-    <div id="copy-toast" class="copy-toast" role="status" aria-live="polite" aria-hidden="true">
-      <span class="copy-toast-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-      </span>
-      <span class="copy-toast-text">Email copied!</span>
-    </div>
-
-    <script>
-      let copyToastTimeout;
-
-      function copyEmail() {
-        const email = "william.sukjaem@protonmail.com";
-        const toast = document.getElementById("copy-toast");
-
-        const showFeedback = () => {
-          clearTimeout(copyToastTimeout);
-          toast.classList.add("copy-toast--visible");
-          toast.setAttribute("aria-hidden", "false");
-
-          copyToastTimeout = setTimeout(() => {
-            toast.classList.remove("copy-toast--visible");
-            toast.setAttribute("aria-hidden", "true");
-          }, 2500);
-        };
-
-        if (navigator.clipboard && window.isSecureContext) {
-          navigator.clipboard.writeText(email).then(showFeedback);
-          return;
-        }
-
-        const textarea = document.createElement("textarea");
-        textarea.value = email;
-        textarea.setAttribute("readonly", "");
-        textarea.style.position = "absolute";
-        textarea.style.left = "-9999px";
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-        showFeedback();
-      }
-    </script>
   </body>
 </html>

@@ -297,101 +297,11 @@ section {
   margin-left: 13%;
   margin-right: 13%;
   border-radius: 50px;
-  height: auto;
-  padding: 2.5rem 2rem;
+  height: 55vh;
 }
 
 #contact .title {
   color: white;
-}
-
-#contact p {
-  margin-top: 0.75rem;
-  color: white;
-  font-size: 1rem;
-  letter-spacing: 1.5px;
-}
-
-.mail-button-color {
-  margin-top: 1.5rem;
-  background: none;
-  color: white;
-  border: white 0.15rem solid;
-}
-
-.mail-button-color:hover {
-  border: rgb(194, 194, 194) 0.15rem solid;
-  background: rgb(97, 97, 97);
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-}
-
-.contact-icon-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.contact-icon {
-  height: 50px;
-  width: 50px;
-  display: block;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact-icon-btn:hover .contact-icon,
-.contact-icons a:hover .contact-icon {
-  transform: scale(1.1);
-}
-
-.copy-toast {
-  position: fixed;
-  top: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(-120%);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.75rem 1.25rem;
-  background: white;
-  color: rgb(53, 53, 53);
-  border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  font-size: 0.95rem;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-.copy-toast--visible {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
-}
-
-.copy-toast-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background: rgb(34, 197, 94);
-  color: white;
-  flex-shrink: 0;
-}
-
-.copy-toast-icon svg {
-  width: 0.85rem;
-  height: 0.85rem;
 }
 
 @media (max-width: 768px) {
