@@ -274,10 +274,12 @@ section {
 
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 2.5rem;
   width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
 }
 
 .project-card {
@@ -289,6 +291,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 }
 
 .project-card-img {
@@ -487,7 +490,8 @@ section {
   }
 
   .project-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
   }
 
   #about-me .about-me-text {
@@ -516,6 +520,7 @@ section {
 
   .project-cards {
     grid-template-columns: 1fr;
+    max-width: 340px;
   }
 
   #about-me .about-me-text {
