@@ -420,7 +420,8 @@ section {
 }
 
 .contact-icon-btn:hover .contact-icon,
-.contact-icons a:hover .contact-icon {
+.contact-icons a:hover .contact-icon,
+.btn-container a:hover .contact-icon {
   transform: scale(1.1);
 }
 
